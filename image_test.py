@@ -1,13 +1,20 @@
 import pygame
 pygame.init()
-screen = pygame.display.set_mode((800, 400))
+
+window_size = (800, 800)
+screen = pygame.display.set_mode((window_size))
+
 pygame.display.set_caption('Loading Image')
 image = pygame.image.load('images/card_symbols.jpg')
-# imagerect = image.get_rect()
-# imagerect.center = ((800//2,400//2))
+
+image_aspect_ratio = image.get_width() / image.get_height()
+image_width = 700
+image_height = 700
+
+scaled_image = pygame.transform.scale(image, (image_width, image_height))
+
 while True:
-    screen.fill("white")
-    # screen.blit(image,imagerect) # using rect object
+    screen.fill((255, 255, 255))
     screen.blit(image, (0, 0))
 
     for event in pygame.event.get():
