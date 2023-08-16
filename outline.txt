@@ -20,3 +20,5 @@
 # methods
 # -inputting name
 
+to do list!
+correct passing of miles to input name
