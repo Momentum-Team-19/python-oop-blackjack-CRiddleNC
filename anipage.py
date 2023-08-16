@@ -76,6 +76,8 @@ def loss_screen(screen):
 def start_screen(results):
     if results == "":
         Screen.wrapper(title_screen)
+    elif results == "":
+        Screen.wrapper(blackjack_screen)
     elif results == "win":
         Screen.wrapper(win_screen)
     else:

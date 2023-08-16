@@ -1,8 +1,9 @@
 import random
 import pygame
+from pygame import mixer
 import os
 import colorama
-from colorama import Fore, Style
+from colorama import Fore, Style, Back
 from card_values import CARD_VALUES
 
 SUITS = [
@@ -118,13 +119,17 @@ class Game():
 
     def play_game(self):
         play_flag = True
-        while play_flag:    
+
+        while play_flag:
+            pygame.mixer.init()
+            pygame.mixer.music.load('music/Song2-Motor-Skills.mp3')
+            pygame.mixer.music.set_volume(0.2)
+            pygame.mixer.music.play(-1)
             print(f'\nWelcome to {self.name}\n')
             self.play_hand()  # This is where im calling my methods to fill and display hands
             self.player.display_hand()
             player_total = self.eval_hand(self.player)  # totaling hands
             print(f"{self.player.name}'s total: {player_total}\n") #  displaying totals
-
 
             self.dealer.display_hand()
             dealer_total = self.eval_hand(self.dealer)
@@ -132,7 +137,7 @@ class Game():
             
             if player_total == 21:  # checking for blackjack from deal
                 print("Congrats! Black Jack! You Win!")
-                return
+                break
             
             while player_total < 21:  # loop to determine if you can accept a hit
                 hit_me = input('Do you want another card? Type: (y/n) ->').lower().strip()
@@ -184,7 +189,10 @@ class Game():
                 else:
                     print("Please enter (y/n)")
                     
-                
+# class Menu():
+#     def __init__(self):
+
+#     pass
 
 new_game = Game()
 new_game.play_game()
