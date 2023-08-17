@@ -121,10 +121,10 @@ class Game():
         play_flag = True
 
         while play_flag:
-            pygame.mixer.init()
-            pygame.mixer.music.load('music/Song2-Motor-Skills.mp3')
-            pygame.mixer.music.set_volume(0.2)
-            pygame.mixer.music.play(-1)
+            # pygame.mixer.init()
+            # pygame.mixer.music.load('music/Song1-Motor-Skills.mp3')
+            # pygame.mixer.music.set_volume(0.2)
+            # pygame.mixer.music.play(-1)
             print(f'\nWelcome to {self.name}\n')
             self.play_hand()  # This is where im calling my methods to fill and display hands
             self.player.display_hand()

@@ -82,3 +82,6 @@ def start_screen(results):
         Screen.wrapper(win_screen)
     else:
         Screen.wrapper(loss_screen)
+
+
+        Image by <a href="https://www.freepik.com/free-vector/gradient-technology-futuristic-background_19332046.htm#query=circuitry&position=0&from_view=search&track=sph">Freepik</a>
