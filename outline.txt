@@ -1,0 +1,24 @@
+# Write your blackjack game here.
+# class for the game
+# attributes
+# -number of cards in unused_cards list
+# -number of cards in used_cards list
+# -number of hands played
+# -game winner (unknown until end)
+# methods
+# -shuffle cards
+# -deal cards from unused_cards list
+# -deciding if player/dealer want another card *?
+# -evaluate players hand out of 21 (calculate hand value total, handle A variablity), if > then bust
+# -compare players hand with dealers to decide winner
+# -add used cards to used_cards list
+# class for the player
+# attributes
+# -player name
+# -game history, wins/losses
+# -specific rules for player
+# methods
+# -inputting name
+
+to do list!
+correct passing of miles to input name
